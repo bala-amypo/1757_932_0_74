@@ -1,4 +1,4 @@
-package.com.example.demo.entity;
+package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,19 +29,19 @@ public void setName(String name){
     this.name=name;
 }
 public String getName(){
-    return name;
+    return this.name;
 }
 public void setEmail(String email){
     this.email=email;
 }
 public String getEmail(){
-    return email;
+    return this.email;
 }
 public void setCgpa(float cgpa){
     this.cgpa=cgpa;
 }
 public float getCgpa(){
-    return cgpa;
+    return this.cgpa;
 }
 
 }
