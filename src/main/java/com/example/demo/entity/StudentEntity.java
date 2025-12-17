@@ -2,12 +2,15 @@ package.com.example.demo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class StudentEntity{
+
 @Id
-@GeneratedValue(stratergy=GeneratedType.IDENTITY)
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+
 private Long id;
 private String name;
 private String email;
@@ -16,19 +19,19 @@ private float cgpa;
 public void setId(Long id){
     this.id=id;
 }
-public int getId(){
+public Long getId(){
     return id;
 }
 public void setName(String name){
     this.name=name;
 }
-public int getName(){
+public String getName(){
     return name;
 }
 public void setEmail(String email){
     this.email=email;
 }
-public int getEmail(){
+public String getEmail(){
     return email;
 }
 public void setCgpa(float cgpa){
