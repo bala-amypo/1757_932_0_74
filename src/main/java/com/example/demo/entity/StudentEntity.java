@@ -9,7 +9,6 @@ private Long id;
 private String name;
 private String email;
 private float cgpa;
-private String dept;
 
 public void setId(Long id){
     this.id=id;
@@ -29,17 +28,12 @@ public void setEmail(String email){
 public int getEmail(){
     return email;
 }
-public void setcgpa(Long id){
-    this.id=id;
+public void setCgpa(float cgpa){
+    this.cgpa=cgpa;
 }
-public int getId(){
-    return id;
+public int getCgpa(float cgpa){
+    return dept;
 }
-public void setId(Long id){
-    this.id=id;
-}
-public int getId(){
-    return id;
-}
+
 
 }
