@@ -24,22 +24,22 @@ public class StudentController {
 }
 
 @PostMapping("/addStudents")
-public ResponseEntity<Student> createStudent(@Valid @RequestBody Student student) {
+public ResponseEntity<StudentEntity> createStudent(@Valid @RequestBody StudentEntity student) {
     return new ResponseEntity<>(service.saveStudent(student),HttpStatus.CREATED);
 }
 
 @GetMapping
-public List<Student> getAllStudents() {
+public List<StudentEntity> getAllStudents() {
     return service.getAllStudents();
 }
 
 @GetMapping("/getStudents/{id}")
-public Student getStudent(@PathVariable Long id) {
+public StudentEntity getStudent(@PathVariable Long id) {
     return service.getStudentById(id);
 }
 
 @PutMapping("/students/{id}")
-public Student updateStudent(@PathVariable Long id, @Valid @RequestBody Student student){
+public StudentEntity updateStudent(@PathVariable Long id, @Valid @RequestBody StudentEntity student){
     return service.updateStudent(id, student);
 }
 
